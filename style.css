@@ -1,0 +1,101 @@
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    max-width: 40%;
+}
+
+.container {
+    padding: 20px;
+}
+
+#first-title {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    height: 50px; 
+    align-items: center;
+}
+
+.navbutton {
+    height: 100%; 
+    border: none; 
+    background: none; 
+    cursor: pointer;
+    border-left: 2px solid;
+    border-right: 2px solid;
+}
+
+.pillar-container {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 100px; /* Adjusted to account for the fixed navbar */
+    margin-bottom: 50px; /* Adjusted to account for the fixed navbar */
+    padding: 0 20px; /* Added padding to the container */
+}
+
+.pillar-text {
+    font-size: 20px; 
+    margin-top: 10px; 
+    color: #333;
+    padding-left: 10%;
+}
+
+li::marker {
+    font-weight: bold;
+}
+
+#achtung {
+    color: rgb(255, 0, 0); 
+    font-weight: bold; 
+    font-size: 25px; 
+    margin-top: 20px;
+}
+
+/* Responsive CSS */
+@media (max-width: 1100px) {
+
+
+    .navbar {
+        flex-direction: row;
+        height: 7%;
+        gap: 10px;
+    }
+
+    p {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    #first-title {
+        font-size: 24px;
+    }
+
+    .pillar-text {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+    
+    p {
+        max-width: 50%%;
+    }
+}
