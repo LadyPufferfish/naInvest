@@ -97,25 +97,15 @@ li::marker {
         gap: 10px;
     }
 
+    .pillar-heading {
+        font-size: 22px;
+    }
+
     p {
         max-width: 50%;
     }
-}
 
-@media (max-width: 480px) {
-    #first-title {
-        font-size: 24px;
-    }
-
-    .pillar-text {
-        font-size: 16px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-    
-    p {
-        max-width: 50%;
+    .pillar {
+        width: 100%;
     }
 }
