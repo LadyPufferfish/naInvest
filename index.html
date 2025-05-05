@@ -68,4 +68,28 @@
         <img src="./image.png" alt="Statistik über den Beitrag von nachhaltigen Geldanlagen zum Klimaschutz" class="image">
     </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('h1[id]');
+        const navButtons = document.querySelectorAll('.navbutton');
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const navButton = Array.from(navButtons).find(button =>
+                        button.getAttribute('onclick').includes(entry.target.id)
+                    );
+
+                    if (entry.isIntersecting) {
+                        navButtons.forEach(button => button.classList.remove('active'));
+                        if (navButton) navButton.classList.add('active');
+                    }
+                });
+            },
+            { threshold: 0.5 } // Adjust threshold as needed
+        );
+
+        sections.forEach(section => observer.observe(section));
+    });
+</script>
 </html>

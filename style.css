@@ -44,6 +44,12 @@ p {
     border-right: 2px solid;
 }
 
+.navbutton.active {
+    background-color: #ddd; /* Highlight color */
+    font-weight: bold;
+    border-radius: 5px;
+}
+
 .pillar-container {
     display: flex; 
     justify-content: space-around; 
